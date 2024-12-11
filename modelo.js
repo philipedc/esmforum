@@ -20,7 +20,7 @@ function listar_perguntas() {
 
 function cadastrar_pergunta(texto) {
   const params = [texto, 1];
-  // const result = bd.exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?) RETURNING id_pergunta', params);
+  const result = bd.exec('INSERT INTO perguntas (texto, id_usuario) VALUES(?, ?) RETURNING id_pergunta', params);
   return result.lastInsertRowid;
 }
 
